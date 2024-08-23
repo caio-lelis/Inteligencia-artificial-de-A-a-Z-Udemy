@@ -1,0 +1,3 @@
+# Avaliação de Algoritmos
+
+A avaliação de algoritmos é uma parte importante do processo de aprendizado de máquina. Ela nos permite comparar diferentes algoritmos e ajustar seus hiperparâmetros para obter o melhor desempenho possível em um determinado conjunto de dados. Neste capítulo, discutiremos algumas métricas comuns usadas para avaliar algoritmos de aprendizado de máquina e como usá-las para avaliar e comparar diferentes modelos.
