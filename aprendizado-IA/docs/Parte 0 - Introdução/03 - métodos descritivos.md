@@ -1,44 +1,49 @@
 # Métodos Descritivos
 
-Os métodos descritivos são uma das três categorias de métodos de mineração de dados, juntamente com os métodos preditivos e os métodos prescritivos. Os métodos descritivos são usados para descrever e resumir os dados, identificar padrões e tendências e extrair informações úteis dos dados. Eles são frequentemente usados para explorar e entender os dados antes de aplicar métodos preditivos ou prescritivos.
-
+Os métodos descritivos são uma das três principais categorias de mineração de dados, ao lado dos métodos preditivos e prescritivos. Esses métodos são utilizados para descrever, resumir, e identificar padrões e tendências nos dados, extraindo informações úteis que auxiliam na compreensão dos mesmos. Eles são frequentemente empregados como uma etapa exploratória antes da aplicação de métodos preditivos ou prescritivos.
 
 | Métodos Preditivos | Métodos Descritivos |
-|----------|----------|
-| Classificação  | Associação  |
-| Regressão  | Agrupamento  |
-|   | Detecção de desvios  |
-|   | Padrões Sequenciais  |
-|   | Sumarização  |
-
-
+|--------------------|---------------------|
+| Classificação      | Associação          |
+| Regressão          | Agrupamento         |
+|                    | Detecção de Desvios |
+|                    | Padrões Sequenciais |
+|                    | Sumarização         |
 
 ## Associação
 
-Na associação tenta-se encontrar algum tipo de associação , o exemplo clássico das prateleiras de mercado aonde foi encontrado uma associação que quando tinha jogo aos finais de semana o homem que comprava cerveja comprava também fraldas, logo pode-se otimizar as vendas deixando as fraldas mais próximas das cervejas.
+A associação busca identificar relações entre itens dentro dos dados. Um exemplo clássico é a análise de padrões de compra em supermercados, onde foi descoberto que, nos finais de semana de jogos, homens que compravam cerveja também compravam fraldas. Esse insight permitiu otimizar as vendas colocando fraldas próximas às cervejas.
 
+## Agrupamento
 
-## Agrupamento 
+O agrupamento envolve a identificação de grupos de dados com características similares. Esse método é útil para segmentar dados de forma que grupos específicos possam ser analisados ou alvo de estratégias diferenciadas.
 
-A ideia do agrupamento é a análise dos dados encontrando grupos dentro desses dados
+**Exemplos de Agrupamento:**
 
-exemplos:
+- **Segmentação de mercado:** Dividir clientes em segmentos para direcionar propagandas de forma mais eficaz.
+- **Identificação de grupos de compradores:** Agrupar potenciais compradores de um produto para focar estratégias de venda.
+- **Agrupamento de produtos similares:** Organizar produtos com características semelhantes para otimizar a gestão de estoque ou estratégias de marketing.
 
-Segmentação de mercado: segmentar os clientes para mandar propaganda somente para pessoas certas
-Encontrar grupos que irão comprar o produto: Agrupar os possiveis compradores de um produto conforme suas características de modo que vc encontre um grupo para que trabalhe encima disso e aumente suas vendas.
-Agrupamento de produtos similares
+## Detecção de Desvios (Outliers, Anomalias)
 
-## Detectação de desvios (outliers,anomalias):
-A ideia da detectação de de desvios é o algoritmo conseguir entender com base nos dados quando um dado x está muito diferente da base de dados e associar esse dado a uma anomalia (outlier)
-- detectar fraude no cartão de crédito
-- intrusão em redes
-- Desempenho de atletas
+A detecção de desvios visa identificar dados que se desviam significativamente dos padrões esperados. Esses desvios são geralmente considerados anomalias (outliers) e podem indicar problemas ou oportunidades específicas.
 
+**Exemplos de Detecção de Desvios:**
 
-## Descoberta de padrões sequenciais 
+- **Fraude em cartões de crédito:** Identificação de transações atípicas que podem indicar fraude.
+- **Intrusão em redes:** Detecção de atividades anômalas que sugerem tentativas de invasão.
+- **Desempenho de atletas:** Identificação de desempenho fora do padrão, indicando possíveis problemas ou necessidades de ajuste.
 
-diante de um dado x o algoritmo irá indicar coisas para cliente. Exemplo, você comprou uma camisa do são paulo, a loja irá mandar um email ou propagandas com itens do são paulo
+## Descoberta de Padrões Sequenciais
+
+A descoberta de padrões sequenciais envolve a identificação de padrões que seguem uma ordem específica ao longo do tempo. Um exemplo comum é a recomendação de produtos: se um cliente compra um item específico, o sistema sugere outros produtos relacionados.
+
+**Exemplo:**
+- Se um cliente comprou uma camisa de um time de futebol, o sistema pode enviar e-mails ou propagandas sugerindo outros itens do time.
 
 ## Sumarização
 
-diante de um dado maior a sumarização trata de sumarizar um dado grande de modo que o dado fique menor mas ainda entendivel e com sentido para algo
+A sumarização consiste em condensar grandes volumes de dados em formatos mais compactos e compreensíveis, sem perder a essência da informação.
+
+**Exemplo:**
+- Resumir um conjunto extenso de dados para apresentar um relatório conciso e de fácil interpretação.

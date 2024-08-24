@@ -1,37 +1,47 @@
-## Escalonamento de Atributos
+# Escalonamento de Atributos
 
-O escalonamento de atributos é uma técnica de pré-processamento de dados que visa normalizar os dados de forma que todos os atributos tenham a mesma escala. Isso é importante porque muitos algoritmos de aprendizado de máquina são sensíveis à escala dos atributos, e o desempenho do modelo pode ser prejudicado se os atributos tiverem escalas muito diferentes. Tornando o algoritmo enviesado para os atributos com maior escala.
+O escalonamento de atributos é uma técnica crucial de pré-processamento de dados em aprendizado de máquina. Ele visa normalizar os dados para que todos os atributos estejam na mesma escala. Isso é importante porque muitos algoritmos de aprendizado de máquina são sensíveis à escala dos atributos, o que pode afetar o desempenho do modelo, tornando-o enviesado em favor dos atributos com maior escala.
 
-Existem várias técnicas de escalonamento de atributos, e as mais comuns são a padronização e a normalização.
+Existem várias técnicas de escalonamento de atributos, sendo as mais comuns a **normalização** e a **padronização**.
 
-### Normalização (Normalization)
+## Normalização (Normalization)
 
-A normalização é uma técnica de escalonamento que visa transformar os valores dos atributos para um intervalo específico, geralmente entre 0 e 1. Isso é feito subtraindo o valor mínimo do atributo e dividindo pelo intervalo de valores do atributo.
+A normalização transforma os valores dos atributos para um intervalo específico, geralmente entre 0 e 1. Essa técnica é útil quando se deseja manter a proporcionalidade dos dados e evitar que atributos com maiores valores dominem o treinamento do modelo.
 
-A fórmula para normalização é a seguinte:
-
+A fórmula para normalização é:
 
 <img style="border-radius: 25%" src="../assets/formula_normalizacao.png" width=400px>
 
+## Padronização (Standardization)
 
-### Padronização (Standardization)
+A padronização transforma os valores dos atributos de modo que tenham uma média de zero e um desvio padrão de um. Isso é particularmente útil quando os dados têm outliers, pois a padronização reduz o impacto que esses pontos extremos podem ter no treinamento do modelo.
 
-A padronização é uma técnica de escalonamento que visa transformar os valores dos atributos de forma que eles tenham média zero e desvio padrão um. Isso é feito subtraindo a média do atributo e dividindo pelo desvio padrão.
-
-A fórmula para padronização é a seguinte:
+A fórmula para padronização é:
 
 <img style="border-radius: 25%" src="../assets/formula_padronizacao.png" width=400px>
 
-### Quando usar normalização ou padronização?
+## Quando Usar Normalização ou Padronização?
 
-A escolha entre normalização e padronização depende do algoritmo de aprendizado de máquina que será utilizado. Alguns algoritmos, como o K-means, são sensíveis à escala dos atributos e funcionam melhor com a padronização. Outros algoritmos, como as redes neurais, são menos sensíveis à escala dos atributos e podem funcionar bem com a normalização.
+A escolha entre normalização e padronização depende do algoritmo de aprendizado de máquina que será utilizado:
 
-Em geral, a padronização é uma técnica mais robusta e é recomendada quando não se sabe qual técnica usar. No entanto, é importante testar ambas as técnicas e verificar qual delas produz os melhores resultados para o seu problema específico.
+- **Normalização:** Indicada para algoritmos que não assumem nenhuma distribuição dos dados, como redes neurais e algoritmos baseados em distâncias (ex.: K-Nearest Neighbors).
+- **Padronização:** Preferida quando os dados possuem outliers significativos ou quando se utiliza algoritmos que assumem uma distribuição normal dos dados, como regressão linear ou SVM (Support Vector Machines).
 
-Dica do curso: 
+**Dica:** A padronização é geralmente recomendada como técnica padrão, especialmente se houver a presença de outliers na base de dados. No entanto, sempre vale a pena testar ambas as abordagens para identificar qual proporciona os melhores resultados para o problema em questão.
 
-- Padronização é mais considerada quando temos outliers na base de dados.
+## Aplicação Prática
 
-### Aplicação
+Com o avanço das bibliotecas de aprendizado de máquina, como o Scikit-learn, a aplicação de escalonamento de atributos se tornou muito simples. Para padronização, pode-se utilizar a classe `StandardScaler`, enquanto para normalização, a classe `MinMaxScaler` é a mais adequada.
 
-Com o avanço das bibliotecas de aprendizado de máquina, como o Scikit-learn, a aplicação de escalonamento de atributos é muito simples. Basta utilizar a classe `StandardScaler` para padronização ou `MinMaxScaler` para normalização.
+**Exemplo em Python:**
+
+```python
+from sklearn.preprocessing import StandardScaler, MinMaxScaler
+
+# Para padronização
+scaler = StandardScaler()
+dados_padronizados = scaler.fit_transform(dados)
+
+# Para normalização
+scaler = MinMaxScaler()
+dados_normalizados = scaler.fit_transform(dados)

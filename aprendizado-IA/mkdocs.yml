@@ -1,1 +1,37 @@
-site_name: My Docs
+site_name: Aprendizado Inteligência Artificial
+repo_url: https://github.com/caio-lelis/Inteligencia-artificial-de-A-a-Z---Udemy.git
+repo_name: Inteligência Artificial de A a Z - Udemy
+
+theme:
+  icon:
+   repo: fontawesome/brands/git-alt
+  name: material
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+
+  language: pt
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline 
+        name: Switch to dark mode
+      primary: 
+      accent: blue 
+    - scheme: slate 
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode    
+      primary: indigo
+      accent: blue
+
